@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 2 css grid</title>
+
+    <style>
+        .item1 {
+            grid-area: header;
+        }
+        .item2 {
+            grid-area: menu;
+        }
+        .item3 {
+            grid-area: main;
+        }
+        .item4 {
+            grid-area: right;
+        }
+        .item5 {
+            grid-area: footer;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-areas: 
+            'header header header header header header'
+            'menu main main main right right'
+            'menu main main main right right'
+            'menu footer footer footer footer footer';
+            /* jika tidak ingin memenuhkan seluruh baris, cukup tambahkan saja titik(.) dan tambahkan juga div jika ingin mengisinya dengan yang lain
+            jika div stelahnya diberikan dengan div class dengan nama yang sama maka dia akan menimpah div yg sama tersebut */
+            gap: 5px; 
+            background-color: blue;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>memahami apa itu grid</h1>
+
+    <p>grid columns ini menggabungkan grid antar columns
+    </p>
+    <div class="grid-container">
+        <div class="item1">Curiculum-Vitae</div>
+        <div class="item2">
+            <p>pendidikan :</p>
+            <p>TK Taman Sari</p>
+            <p>SD Negeri 1 Burnai Timur</p>
+            <p>SMP As-Shiddiqiyyah</p>
+            <p>SMA Negeri 1 Air Naningan</p>
+            <p>Universitas Nahdlatul Ulama Lampung</p>
+        </div>
+        <div class="item3">
+            <p>Nama saya Ferdi RIzkyawan lulusan tahun 2022 fakultas sains dan teknologi program studi sistem informasi.
+                saya pernah magang di salah satu PT yang ada dilampung timur dan salah satu projek yang saya kerjakan yaitu
+                membangun sistem informasi penerimaan murid baru salah satu smp yang ada dilampung timur berbasis web.
+                saya harap saya dapat bergabung dengan perusahaan anda.
+            </p>
+        </div>
+        <div class="item4">
+            Fakultas Sains Dan Teknologi</p>
+            <p>prodi Sistem Informasi</p>
+            <p>IPK 3,71
+        </div>
+        <div class="item5">
+            Created by, Ferdi Rizkyawan, 15 Juni 2025
+        </div>
+    </div>
+    
+</body>
+</html>

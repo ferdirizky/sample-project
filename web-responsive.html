@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web responsive menggunakan flex</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            /* karena body default nya memiliki padding */
+        }
+        header {
+            background-color: blue;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        footer {
+            background-color:yellow;
+            color: black;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .left-menu {
+            width: 100%;
+            padding: 20px;
+            background-color: green;
+            color: white;
+        }
+        .content {
+            width: 100%;
+            padding: 20px;
+            color: black;
+        }
+        .right-menu {
+            width: 100%;
+            padding: 20px;
+            background-color: darkgoldenrod;
+            color: black;
+        }
+        @media only screen and (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
+            .left-menu {
+                width: 25%;
+            }
+            .content {
+                width: 50%;
+            }
+            .right-menu {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>Curiculum Vitae</header>
+
+    <div class="container">
+        <div class="left-menu">
+            <p>pendidikan :</p>
+            <p>TK Taman Sari</p>
+            <p>SD Negeri 1 Burnai Timur</p>
+            <p>SMP As-Shiddiqiyyah</p>
+            <p>SMA Negeri 1 Air Naningan</p>
+            <p>Universitas Nahdlatul Ulama Lampung</p>
+        </div>
+        <div class="content">
+            <h1>Curiculum Vitae</h1>
+            <p>Nama saya Ferdi RIzkyawan lulusan tahun 2022 fakultas sains dan teknologi program studi sistem informasi.
+                saya pernah magang di salah satu PT yang ada dilampung timur dan salah satu projek yang saya kerjakan yaitu
+                membangun sistem informasi penerimaan murid baru salah satu smp yang ada dilampung timur berbasis web.
+                saya harap saya dapat bergabung dengan perusahaan anda.
+            </p>
+        </div>
+        <div class="right-menu">
+            <p>Fakultas Sains Dan Teknologi</p>
+            <p>prodi Sistem Informasi</p>
+            <p>IPK 3,71</p>
+        </div>
+    </div>
+    <footer>Created by, Ferdi Rizkyawan, 15 Juni 2025</footer>
+    
+</body>
+</html>
